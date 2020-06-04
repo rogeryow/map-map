@@ -1,0 +1,273 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#map-root {
+	background-color: #AADAFF;
+	width: 100%;
+	height: 700px;
+	overflow: hidden;
+}
+
+#map {
+	padding: 20px;
+	position: relative;	
+	top: 0px;
+	left: 0px;
+}
+
+#map-sidebar {
+	float: right;
+	background-color: #F5F5F5;
+	width: 41%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+#map-content {
+	width: 59%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+#map-davao {
+	height: 600px;	
+	position: relative;
+}
+
+.hover {
+	background-color: #FF9800;
+}
+
+.stat-box {
+	z-index: 2;
+	background-color: #fff;
+	position: absolute;
+	padding: 10px;
+	width: 150px;
+}
+
+.filter-box {
+	z-index: 2;
+	position: absolute;
+	background-color: #fff;
+	padding: 10px;
+	top: 180px;
+}
+
+.filter-position-box {
+	position: absolute;
+	top: 250px;
+	left: 10px;
+	background-color: #fff;
+	width: 200px;
+}
+
+.cls-1, .cls-2 {
+	fill: #fff;
+	stroke: #AADAFF;
+	fill-rule: evenodd;
+	stroke-width: 1.2px;
+}
+
+.cls-2 {
+	stroke-miterlimit: 10;
+}
+
+svg text {
+	/*fill: #7E8EA5;*/
+	fill: #fff;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+svg path {
+	transition: all 0.2s ease-in-out 0s;
+}
+
+#purok-list {
+	background-color: #ffffff;
+}
+
+#piechart {
+	position: absolute;
+	top: 350px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.table-map {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.table-map td, .table-map th{
+	padding: 0.10rem;
+    border-top: 0;
+}
+
+.map-purok {
+
+}
+
+.row-line {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.no-pad {
+	padding: 0;
+}
+
+.card-body {
+	padding: 0;
+}
+
+.map-badge {
+	padding: 5x;
+	border-radius: .10rem;
+}
+
+.purok-title {
+    display: inherit;
+    padding: 0px 8px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+.text-short {
+	padding: 0 8px;
+	font-size: 12px;
+}
+
+.table-total td{
+	padding: 10px 0;
+}
+
+.map-progress {
+	position: relative;
+	width: 100%;
+	background-color: #E9ECEF;
+	margin-bottom: 15px;
+}
+
+.map-bar {
+	width: 1%;
+	height: 26px;
+	padding-left: 5px;
+	color: #f5f5f5;
+}
+
+.map-bar span {
+	display: inline-block;
+	color: #444444;
+	margin-left: 5px;
+}
+
+.map-color-red-active {
+	background-color: #f44236;
+}
+
+.map-color-red-inactive {
+	background-color: #e57373;
+}
+
+.map-color-yellow-active {
+	background-color: #FFC107;
+}
+
+.map-color-yellow-inactive {
+	background-color: #FFD54F;
+}
+
+.map-color-green-active {
+	background-color: #4CAF50;
+}
+
+.map-color-green-inactive {
+	background-color: #81C784;
+}
+
+.map-color-blue-active {
+	background-color: #2096F3;
+}
+
+.map-color-blue-inactive {
+	background-color: #64B5F6;
+}
+
+.map-bar-absolute-pos {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.map-bar-total {
+	float: right;
+	padding: 12px;
+}
+
+.total-icon {
+	margin-left: 8px;
+}
+
+.card-header-custom {
+	padding-left: 10px;
+}
+
+.place-title {
+    position: relative;
+    top: 3px;
+    margin-left: 5px;
+}
+
+.place-title-2 {
+    position: relative;
+    top: 3px;
+}
+
+.legend {
+	margin-right: 16px;
+}
+
+.legend span {
+	font-weight: 400;
+}
+
+.capital-icon {
+	font-size: 14px;
+}
+
+.purok-icon {
+	position: relative;
+    top: 2PX;
+    font-size: : 17px;
+}
+
+.non-member-icon {
+	color: lightgrey;
+}
+
+.bar-right {
+	float: right;
+	margin-right: 5px;
+	color: #ffffff !important;
+	font-size: 12px;
+}
+
+.icon-align {
+	position: relative;
+    top: 2px;
+}
