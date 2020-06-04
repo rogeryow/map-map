@@ -20,70 +20,49 @@
 									<!-- todo start -->
 									<div id="map-root">
 										<div id="map-content">
-										<div class="stat-box">
-										<label id="barangay-text">Name</label>
-										<table>
-										<tr>
-										<td>Red</td>
-										<td><span id="red-text">0</span></td>
-										</tr>
-										<tr>
-										<td>Yellow</td>
-										<td><span id="yellow-text">0</span></td>
-										</tr>
-										<tr>
-										<td>Green</td>
-										<td><span id="green-text">0</span></td>
-										</tr>
-										<tr>
-										<td>Blue</td>
-										<td><span id="blue-text">0</span></td>
-										</tr>  
-										</table>
-										</div>
 
-										<div class="filter-box">
-											<table>
-											<tr>
-											<td><label for="none">None</label></td> 
-											<td><input name="color-filer" class="filter-color" type="radio" id="none" checked=""></td>
-											</tr>
-											<tr>
-											<td><label for="red">Red</label></td> 
-											<td><input name="color-filer" color="red" class="filter-color" type="radio" id="red"></td>
-											</tr>
-											<tr>
-											<td><label for="yellow">Yellow</label></td> 
-											<td><input name="color-filer" color="yellow" class="filter-color" type="radio" id="yellow"></td>
-											</tr>
-											<tr>
-											<td><label for="green">Green</label></td> 
-											<td><input name="color-filer" color="green" class="filter-color" type="radio" id="green"></td>
-											</tr>
-											<tr>
-											<td><label for="blue">Blue</label></td> 
-											<td><input name="color-filer" color="blue" class="filter-color" type="radio" id="blue"></td>
-											</tr>
-											</table>
+											<div class="filter-box">
+												<table>
+													<tr>
+													<td><label for="none">None</label></td> 
+													<td><input name="color-filer" class="filter-color" type="radio" id="none" checked=""></td>
+													</tr>
+													<tr>
+													<td><label for="red">Red</label></td> 
+													<td><input name="color-filer" color="red" class="filter-color" type="radio" id="red"></td>
+													</tr>
+													<tr>
+													<td><label for="yellow">Yellow</label></td> 
+													<td><input name="color-filer" color="yellow" class="filter-color" type="radio" id="yellow"></td>
+													</tr>
+													<tr>
+													<td><label for="green">Green</label></td> 
+													<td><input name="color-filer" color="green" class="filter-color" type="radio" id="green"></td>
+													</tr>
+													<tr>
+													<td><label for="blue">Blue</label></td> 
+													<td><input name="color-filer" color="blue" class="filter-color" type="radio" id="blue"></td>
+													</tr>
+												</table>
 
-											<div class="filter-position-box"> 
-											<table>
-											<tr>
-											<td><label for="total">Total</label></td> 
-											<td><input name="position-filter" position="total" class="filter-position" type="radio" id="Total" checked></td>
-											</tr>
-											<tr>
-											<td><label for="red">Members</label></td> 
-											<td><input name="position-filter" position="members" class="filter-position" type="radio" id="Members"></td>
-											</tr>
-											<tr>
-											<td><label for="nonMembers">Non-members</label></td> 
-											<td><input name="position-filter" position="nonMembers" class="filter-position" type="radio" id="nonMembers"></td>
-											</tr>
-											</table>
+												<div class="filter-position-box"> 
+												<table>
+													<tr>
+													<td><label for="total">Total</label></td> 
+													<td><input name="position-filter" position="total" class="filter-position" type="radio" id="Total" checked></td>
+													</tr>
+													<tr>
+													<td><label for="red">Members</label></td> 
+													<td><input name="position-filter" position="members" class="filter-position" type="radio" id="Members"></td>
+													</tr>
+													<tr>
+													<td><label for="nonMembers">Non-members</label></td> 
+													<td><input name="position-filter" position="nonMembers" class="filter-position" type="radio" id="nonMembers"></td>
+													</tr>
+												</table>
+												</div>
+
 											</div>
-
-										</div>
 
 									<div id="map">
 										<svg id="map-davao" root-data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 792">

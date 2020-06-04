@@ -33,19 +33,12 @@ html {
 
 #map-davao {
 	height: 600px;	
+	left: 270px;
 	position: relative;
 }
 
 .hover {
 	background-color: #FF9800;
-}
-
-.stat-box {
-	z-index: 2;
-	background-color: #fff;
-	position: absolute;
-	padding: 10px;
-	width: 150px;
 }
 
 .filter-box {
