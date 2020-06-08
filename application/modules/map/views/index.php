@@ -491,38 +491,39 @@
 					<div class="card-body">
 
 						<input class="my-select" type="text" name="list-of-barangay" list="list-of-barangay"/>
-							<datalist id="list-of-barangay">
-								<select id="select-barangay" name="list-of-barangay">
-									<option value="kapatagan">
-									<option value="dulangan">
-									<option value="soong">
-									<option value="balabag">
-									<option value="goma">
-									<option value="binaton">
-									<option value="ruparan">
-									<option value="kiagot">
-									<option value="sinawilan">
-									<option value="tres de mayo">
-									<option value="san agustin">
-									<option value="mahayahay">
-									<option value="lungag">
-									<option value="san roque">
-									<option value="matti">
-									<option value="zone 1">
-									<option value="zone 2">
-									<option value="cogon">
-									<option value="aplaya">
-									<option value="san miguel">
-									<option value="san jose">
-									<option value="dawis">
-									<option value="tiguman">
-									<option value="colorado">
-									<option value="igpit">
-								</select>
-							</datalist>
-						</label>
+						<datalist id="list-of-barangay">
+							<select id="select-barangay" name="list-of-barangay">
+								<option value="kapatagan">
+								<option value="dulangan">
+								<option value="soong">
+								<option value="balabag">
+								<option value="goma">
+								<option value="binaton">
+								<option value="ruparan">
+								<option value="kiagot">
+								<option value="sinawilan">
+								<option value="tres de mayo">
+								<option value="san agustin">
+								<option value="mahayahay">
+								<option value="lungag">
+								<option value="san roque">
+								<option value="matti">
+								<option value="zone 1">
+								<option value="zone 2">
+								<option value="zone 3">
+								<option value="cogon">
+								<option value="aplaya">
+								<option value="san miguel">
+								<option value="san jose">
+								<option value="dawis">
+								<option value="tiguman">
+								<option value="colorado">
+								<option value="igpit">
+							</select>
+						</datalist>
+						<br><br>
+						todo
 					</div>
-
 				</div>
 			</div>
 		</div>
