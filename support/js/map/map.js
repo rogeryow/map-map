@@ -60,6 +60,7 @@ function startMap() {
 		addMapPositionFilter()
 		moveMap()
 		moveFilterBox()
+		fillBarangayList()
 
 		function setMapColor(barangays, option) {
 			console.log(filter)
@@ -249,17 +250,11 @@ function startMap() {
 		}
 
 		function addMapPositionFilter() {
-			const positionFilterNodes = Array.from(
-				document.getElementsByClassName('filter-position'))
-
-			positionFilterNodes.forEach((node) => {
-				node.addEventListener('click', function() {
-					if(node.hasAttribute('position')) {
-						const position = node.getAttribute('position')
-						filter.position = position
-						setMapColor(barangays, filter)
-					}
-				})
+			const positionNode = document.getElementById('position-filter')
+			positionNode.addEventListener('change', function(event) {
+				const position = event.target.value
+				filter.position = position
+				setMapColor(barangays, filter)
 			})
 		}
 
@@ -346,13 +341,20 @@ function startMap() {
 		}
 
 		function moveFilterBox() {
-			// $( "#draggable" ).draggable({ handle: "p" });
 			$('.filter-box').draggable({ 
 				handle: '.move-box',
+				containment: 'parent',
 				scroll: true, 
 				scrollSensitivity: 100,
 				cursor: 'move',
 			})
+		}
+
+		function fillBarangayList() {
+			const barangayList = document.getElementById('select-barangay')
+			let renderer = ''
+
+
 		}
 
 	})
