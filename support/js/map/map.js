@@ -59,6 +59,7 @@ function startMap() {
 		addMapZoom()
 		addMapPositionFilter()
 		moveMap()
+		moveFilterBox()
 
 		function setMapColor(barangays, option) {
 			console.log(filter)
@@ -98,8 +99,8 @@ function startMap() {
 
 				const getColor = Object.keys(filteredStat).reduce((now, current) => filteredStat[now] > filteredStat[current] ? now : current )
 				
-				if(sequential) {
-					const statArray = splitNumberToArray(total[getColor])	
+				if(sequential) {	
+					const statArray = splitNumberToArray(total[getColor])
 					const colorStat = statistics[position][getColor]
 					colorIntensity = getColorIntensity(colorStat, statArray)
 				} 
@@ -134,9 +135,10 @@ function startMap() {
 
 		function addMapHoverOver() {
 			// todo
-				map.addEventListener('mouseover', function({target: barangayNode}) {
+			map.addEventListener('mouseover', function({target: barangayNode}) {
 				const barangay = barangayNode.getAttribute('data-name') || undefined 
 				if(barangay) displayBarangayInfo(getBarangayInfo(barangay)) 
+					
 			})
 		}
 
@@ -208,31 +210,42 @@ function startMap() {
 			// blueText.innerHTML = stats.blue
 		}
 
-		function addMapColorfilter() {
-			const colorFilterNodes = Array.from(document.getElementsByClassName('filter-color'))
+		function addMapColorfilter() {	
+			const colorNode = document.getElementById('color-filter')
 
-			colorFilterNodes.forEach((node) => {
-				node.addEventListener('click', function() {
-					if(node.hasAttribute('color')) {
-						const color = node.getAttribute('color')
-						filter.red = false
-						filter.yellow = false 
-						filter.green = false 
-						filter.blue = false
-						filter.sequential = true
+			colorNode.addEventListener('change', function(event) {
+				const color = event.target.value
+				setColorNodes(color)
+				if(color == 'all') {
+					filter.red = true
+					filter.yellow = true 
+					filter.green = true 
+					filter.blue = true
+					filter.sequential = false
+					setMapColor(barangays, filter)
+				}else {
+					filter.red = false
+					filter.yellow = false 
+					filter.green = false 
+					filter.blue = false
+					filter.sequential = true
 
-						filter[color] = true
-						setMapColor(barangays, filter)
-					} else {
-						filter.red = true
-						filter.yellow = true 
-						filter.green = true 
-						filter.blue = true
-						filter.sequential = false
-						setMapColor(barangays, filter)
-					}
-				})
+					filter[color] = true
+					setMapColor(barangays, filter)
+				}
 			})
+		}
+
+		function setColorNodes(color) {
+			if(colors[color]) {
+				const colorRangeNodes = document.querySelectorAll('[color-range]')
+				colorRangeNodes.forEach((node) => {
+					let range = node.getAttribute('color-range')
+					node.style.backgroundColor = colors[color][range]
+				})
+			}else {
+				console.log('fail')
+			}
 		}
 
 		function addMapPositionFilter() {
@@ -250,9 +263,9 @@ function startMap() {
 			})
 		}
 
-		function splitNumberToArray(number) {
+		function splitNumberToArray(total) {
 			const sequence = []
-			const startNumber = number/5
+			const startNumber = total/5
 			
 			for (let index = 1; index <= 5; index++) {
 				sequence.push(startNumber * index)
@@ -326,6 +339,16 @@ function startMap() {
 
 		function moveMap() {
 			$('#map-davao').draggable({ 
+				scroll: true, 
+				scrollSensitivity: 100,
+				cursor: 'move',
+			})
+		}
+
+		function moveFilterBox() {
+			// $( "#draggable" ).draggable({ handle: "p" });
+			$('.filter-box').draggable({ 
+				handle: '.move-box',
 				scroll: true, 
 				scrollSensitivity: 100,
 				cursor: 'move',

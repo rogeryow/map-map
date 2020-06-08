@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>support/css/map/map.css">
 <script type="module" src="<?php echo base_url() ?>support/js/map/map.js"></script>
 
@@ -9,11 +10,11 @@
 					<div class="card-header ui-sortable-handle">
 						<h3 class="card-title">
 							<i class="fas fa-map mr-1"></i>
-							Map
+							Map view
 						</h3>
 					</div>
 
-					<div class="card-body">
+					<div class="card-body no-pad">
 						<div class="tab-content p-0">
 							<div class="chart tab-pane active" id="digos-map">
 								<div>
@@ -22,53 +23,51 @@
 										<div id="map-content">
 
 											<div class="filter-box">
-												<table>
-													<tr>
-													<td><label for="none">None</label></td> 
-													<td><input name="color-filer" class="filter-color" type="radio" id="none" checked=""></td>
-													</tr>
-													<tr>
-													<td><label for="red">Red</label></td> 
-													<td><input name="color-filer" color="red" class="filter-color" type="radio" id="red"></td>
-													</tr>
-													<tr>
-													<td><label for="yellow">Yellow</label></td> 
-													<td><input name="color-filer" color="yellow" class="filter-color" type="radio" id="yellow"></td>
-													</tr>
-													<tr>
-													<td><label for="green">Green</label></td> 
-													<td><input name="color-filer" color="green" class="filter-color" type="radio" id="green"></td>
-													</tr>
-													<tr>
-													<td><label for="blue">Blue</label></td> 
-													<td><input name="color-filer" color="blue" class="filter-color" type="radio" id="blue"></td>
-													</tr>
-												</table>
+												<i class="fas fa-arrows-alt move-box"></i>
+												<div id="filter">
+													<select id="color-filter" class="my-select">
+														<option value="all">All</option>
+														<option value="red">Red</option>
+														<option value="yellow">Yellow</option>
+														<option value="green">Green</option>
+														<option value="blue">Blue</option>
+													</select>
 
-												<div class="filter-position-box"> 
-												<table>
-													<tr>
-													<td><label for="total">Total</label></td> 
-													<td><input name="position-filter" position="total" class="filter-position" type="radio" id="Total" checked></td>
-													</tr>
-													<tr>
-													<td><label for="red">Members</label></td> 
-													<td><input name="position-filter" position="members" class="filter-position" type="radio" id="Members"></td>
-													</tr>
-													<tr>
-													<td><label for="nonMembers">Non-members</label></td> 
-													<td><input name="position-filter" position="nonMembers" class="filter-position" type="radio" id="nonMembers"></td>
-													</tr>
-												</table>
+													<select class="my-select">
+														<option value="total">Overall</option>
+														<option value="members">Members</option>
+														<option value="nonMembers">Non-members</option>
+													</select>
 												</div>
 
+												<div id="color-range">
+													<div class="divider">
+														<div color-range="4" class="square" style="background: #B71B1C"></div><span>400 - 499</span>
+													</div>
+
+													<div class="divider">
+														<div color-range="3" class="square" style="background: #D32E30"></div><span>300 - 399</span>
+													</div>
+
+													<div class="divider">
+														<div color-range="2" class="square" style="background: #F44236"></div><span>200 - 299</span>
+													</div>
+
+													<div class="divider">
+														<div color-range="1" class="square" style="background: #E57373"></div><span>100 - 199</span>
+													</div>
+
+													<div class="divider">
+														<div color-range="0" class="square" style="background: #F4C7C3"></div><span>0 - 99</span>
+													</div>
+												</div>
 											</div>
 
 									<div id="map">
 										<svg id="map-davao" root-data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 792">
-										<path data-name="kapatagan" class="cls-1" d="M6.45,8.21l137.62.38,28.25,21.34,13.46,6.35,9.8,11.15L209.8,50.5,216.53,59l7.88,6.73,6,.39,2.5,6-.39,10.57,1.16,2.31,10,3.65,8.65,1,4-4,7.88,1,6,4.42,6.92-3.66,6.54-7.69L285.34,83l8.65,2.7,7.49-1.16,3.65-.38,4-2.89,4-1.34L317.05,78l3.84-3.08,4.81-1.35,4.8,1.35,6.92-.19,3.85.57,4.42,1.16,6-3.27,2.11.77,1,4-.38,5.76-3.46,6L348,98.57s-12.49,3.65-10.57,10.76-5.19,13.27-5.19,13.27l-3.84,11.92L339,148.94l3.46,1,6.15,6h7.11L370.87,162,382,167.2l.58,3.66L373.17,182l-4.8,8.26-9,6.73-6.72,6.16-4.42,7.69-.39,7.88.77,11.34-1.92,4-6.15,3.65-.39,8.46,6.54,6.15,4.8,1.35-1.92,8.65-3.46,6.92-90.91,33.26L113.32,189.31l-45.55-37.1L63,135.87l-6.53-7.5-2.31-17.31V102.8l2.5-5-2.31-5.38-5.38.76-3.07-1.73-1-4.8-.38-25L35.67,40.7,37.21,29l-7.69-4.81L14.91,22.82l-6.73-9L6.45,12.44Z"/>
-										<path data-name="dulangan" class="cls-1" d="M222.43,275.6l-41-33.07.51,227.38,16.28,18.58,1,2.57L195,506.18l3.2,3.2-8.71,4.75-2.82,5.38,7.3,8.72.13,6.28-8.72.77-5.25,6.66.26.77,2.69.26h12.68l8.72,2.56,6.53,7.18-.12,3.46,4.61,5.89,4.61-3.33,2.95,2.56,3-1.28,3.71-5.77L231,532.07l1.66-2.05-2.82-2.31L226,526.3l7.69-13.07,2.3-.77,2.57-.38,4.1,2.18,2.69,4.1.38.89-5.12,4.49,1.66,1.15,2.18.9,2.05.9,1.28.25,6.67-1.41Z"/>
-										<path data-name="soong" class="cls-1" d="M348,456.71l-5.19,1.73-20.75-.2-8.27,4.62,2.12,4.61-1.73,51.14-2.5,2.5-1,3.27-6-.38-3.08,1.92,11.92,10.77,34.4-1.16,14-12.3-6.15-10L354.76,495l.77-9.81-2.12-9,.58-5.38Z"/>
+										<path id="kapatagan" data-name="kapatagan" class="cls-1" d="M6.45,8.21l137.62.38,28.25,21.34,13.46,6.35,9.8,11.15L209.8,50.5,216.53,59l7.88,6.73,6,.39,2.5,6-.39,10.57,1.16,2.31,10,3.65,8.65,1,4-4,7.88,1,6,4.42,6.92-3.66,6.54-7.69L285.34,83l8.65,2.7,7.49-1.16,3.65-.38,4-2.89,4-1.34L317.05,78l3.84-3.08,4.81-1.35,4.8,1.35,6.92-.19,3.85.57,4.42,1.16,6-3.27,2.11.77,1,4-.38,5.76-3.46,6L348,98.57s-12.49,3.65-10.57,10.76-5.19,13.27-5.19,13.27l-3.84,11.92L339,148.94l3.46,1,6.15,6h7.11L370.87,162,382,167.2l.58,3.66L373.17,182l-4.8,8.26-9,6.73-6.72,6.16-4.42,7.69-.39,7.88.77,11.34-1.92,4-6.15,3.65-.39,8.46,6.54,6.15,4.8,1.35-1.92,8.65-3.46,6.92-90.91,33.26L113.32,189.31l-45.55-37.1L63,135.87l-6.53-7.5-2.31-17.31V102.8l2.5-5-2.31-5.38-5.38.76-3.07-1.73-1-4.8-.38-25L35.67,40.7,37.21,29l-7.69-4.81L14.91,22.82l-6.73-9L6.45,12.44Z"/>
+										<path id="dulangan" data-name="dulangan" class="cls-1" d="M222.43,275.6l-41-33.07.51,227.38,16.28,18.58,1,2.57L195,506.18l3.2,3.2-8.71,4.75-2.82,5.38,7.3,8.72.13,6.28-8.72.77-5.25,6.66.26.77,2.69.26h12.68l8.72,2.56,6.53,7.18-.12,3.46,4.61,5.89,4.61-3.33,2.95,2.56,3-1.28,3.71-5.77L231,532.07l1.66-2.05-2.82-2.31L226,526.3l7.69-13.07,2.3-.77,2.57-.38,4.1,2.18,2.69,4.1.38.89-5.12,4.49,1.66,1.15,2.18.9,2.05.9,1.28.25,6.67-1.41Z"/>
+										<path id="soong" data-name="soong" class="cls-1" d="M348,456.71l-5.19,1.73-20.75-.2-8.27,4.62,2.12,4.61-1.73,51.14-2.5,2.5-1,3.27-6-.38-3.08,1.92,11.92,10.77,34.4-1.16,14-12.3-6.15-10L354.76,495l.77-9.81-2.12-9,.58-5.38Z"/>
 										<path data-name="balabag" class="cls-1" d="M69,151.4l45.17,36.53L93,458.05l2.89,7.69v6.15l4,4.43,3.65,7.88,2.7-1,2.49,3.07,16,2.12,4,20.38,3.65,1.54-.76,3.46-16.15,8.84-.77,1.54,2.89,3.65L114.13,534l-4.81,1.16h-1.73l-1,1.73L99.13,534l-3.26-3.84-3.66-4L85.1,518l-4.23-3.66-5-1.73-3.08,5.19-1.34-2.5L69,511.88,70.88,503l-5-20,.2-25.77-6-9.61,1.15-8.27L48.59,412.1l-6.54-4.42-2.31-19.8,4.81-14.23-1.73-10.38,1.54-14.81-5-25.18v-6.54L42.63,296l10.18-15,5.58-13.46,3.26-11.92v-6l20.57-30.37,1.35-9.62,1.34-9.8Z"/>
 										<path data-name="goma" class="cls-1" d="M114.3,188,92.75,458.32l3.57,7.83-.18,6.06L99.52,476l4.1,8.36,2.49-1.06,2.67,3.38,16,1.6,3.91,20.83,3.92,1.61-1.07,3.56,1.78.89,1.25,4.27,4.45-.18,2.14.72,2.49-3.21,2.67-1.07L151,527.23l1.78,1.42,2-1.07,4.81,7.12,3.56,8.37,9.44,7.84,1.78-.18,1.6-1.78,1.25-7.66,3.2,1.07,4.81-7.12,8.9-1.07.18-6-7.83-8.73,2.67-5.34,8.72-4.27-2.67-3.21,4.1-15.13-2.68-5.17-14.77-16.38-.18-226.49Z"/>
 										<path data-name="binaton" class="cls-1" d="M222.3,274.66l33.25,26.81,92.05-33.55-4.55,11.6-.79,9.1.47,14.42-1.25,11.29L339.13,327l-3.92,13.49,1.57,9.88,1.09,4.86-2,6-4.23,7-4.39,6.27-4.7,4.08-.32,5.18.47,2,3,5.34.16,1.25-2.35,13.33L325,417.2l3.61,5.8,2,9.72,15.68,15.52.63,5,1.1,3.29-4.71,2-20.85-.47L314,463.61l2.19,3.92-2,50.8-2.35,2.51-1.25,3.61-5.8-.78-7.06,4.54-5.72.53,2.82,4.83v1.82l-11.49-1.21-1,.2,1.41,4L279.52,542l-8.87,3.42L267.43,543l-.81-5-1-2,.8-3.63-1.61-3-2.22-2.21-4.43-1.42-3.62-.4Z"/>
@@ -107,19 +106,7 @@
 
 									<div id="map-sidebar">
 										<div class="card map-card">
-<!-- 											<div class="card-header card-header-custom">
-
-													<span class="legend"><i class="fas fa-synagogue capital-icon"></i> <span class="place-title-2">Barangay</span></span> 
-
-													<span class="legend"><i class="fas fa-home purok-icon"></i> <span class="place-title-2">Purok</span></span> 
-													
-													<span class="legend"><i class="fas fa-square purok-icon"></i> <span class="place-title-2">Member</span></span> 
-													
-													<span class="legend"><i class="fas fa-square purok-icon non-member-icon"></i> <span class="place-title-2">Non-member</span></span> 
-								
-											</div> -->
-											<!-- add toggle -->
-											<div class="card-body">
+											<div class="card-body no-pad">
 												<div class="container-fluid">
 
 												<div class="map-purok">
@@ -486,6 +473,36 @@
 
 				</div>
 			</section>
+		</div>
+	</div>
+</section>
+
+<section class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card">
+					<div class="card-header ui-sortable-handle">
+						<h3 class="card-title">
+							<i class="fas fa-chart-line mr-1"></i>
+							Statistic
+						</h3>
+					</div>
+					<div class="card-body">
+
+						<input class="my-select" type="text" name="movies" list="movies"/>
+							<datalist id="movies">
+								<select name="movies">
+									<option value="Star Wars">
+									<option value="The Godfather">
+									<option value="Goodfellas">
+								</select>
+							</datalist>
+						</label>
+					</div>
+
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

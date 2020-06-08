@@ -33,7 +33,7 @@ html {
 
 #map-davao {
 	height: 600px;	
-	left: 270px;
+	left: 300px;
 	position: relative;
 }
 
@@ -42,24 +42,21 @@ html {
 }
 
 .filter-box {
+	height: 210px;
 	z-index: 2;
 	position: absolute;
-	background-color: #fff;
+	background-color: #ffffff;
 	padding: 10px;
-	top: 180px;
-}
-
-.filter-position-box {
-	position: absolute;
-	top: 250px;
-	left: 10px;
-	background-color: #fff;
-	width: 200px;
+	bottom: 15px;
+	left: 15px;
+	border-radius: 8px;
+	box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
 }
 
 .cls-1, .cls-2 {
 	fill: #fff;
-	stroke: #AADAFF;
+	/*stroke: #AADAFF;*/
+	stroke: #5b5c5d;
 	fill-rule: evenodd;
 	stroke-width: 1.2px;
 }
@@ -119,10 +116,6 @@ ul li {
 }
 
 .no-pad {
-	padding: 0;
-}
-
-.card-body {
 	padding: 0;
 }
 
@@ -263,4 +256,77 @@ ul li {
 .icon-align {
 	position: relative;
     top: 2px;
+}
+
+/* shapes start */
+#color-range {
+	margin-top: 15px;
+	margin-left: 5px;
+}
+
+.my-select {
+	width: auto;
+    border: 1px solid #DFE1E5;
+	display: inline-block;
+	padding: 6px 12px;
+	padding-right: 25px;
+	margin-right: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    vertical-align: middle;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .75rem center/8px 10px; 
+    color: #1967D2;
+    background-color: #E8F0FE;
+    border-radius: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    font-family: Roboto;
+}
+
+.my-select:focus {
+	width: auto;
+}
+
+.my-select option {
+	padding: 8px 12px;
+}
+
+.divider {
+	margin-bottom: 2.5px;
+}
+
+.square {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+select:focus {
+	outline: none;
+	width: auto;
+}
+
+:focus {
+	outline: none;
+}
+
+/* shapes end */
+
+.move-box {
+	position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 35PX;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.move-box:hover {
+	color: #CED4DA;
+	transition: color 0.2s ease-in-out 0s;
 }
